@@ -11,9 +11,9 @@
         <input type="password" class="form-control" id="password" #password placeholder="Password">
       </div>
       <button (click)="loginEmail(email.value, password.value); email.value=''; password.value='';" class="btn btn-indigo waves-light">Sign In</button>
-      <button (click)="loginGoogle(); email.value=''; password.value='';" class="btn btn-default waves-light">Sign In with Google</button>
+      <button (click)="motherfuckerOut()" class="btn btn-indigo waves-light">Sign up</button>
+      <span (click)="loginGoogle(); email.value=''; password.value='';" id="google_btn"><img src="assets/btn_google.png"></span>
     </form>
-    <span (click)="motherfuckerOut()">Sign up?</span>
   </div>
 </div>
 <div *ngIf="!login" id="login" class="card bg-light mb-3">
