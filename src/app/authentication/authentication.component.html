@@ -1,3 +1,12 @@
+<div id="polls">
+  <ul>
+    <li *ngFor="let poll of polls | async">
+      {{poll.question | async}}
+      {{poll.choice1 | async}}
+      {{poll.choice2 | async}}
+    </li>
+  </ul>
+</div>
 <div *ngIf="login" id="login" class="card bg-light mb-3">
   <div class="card-header">Sign In</div>
   <div class="card-body">

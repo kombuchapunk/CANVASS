@@ -19,9 +19,9 @@ export class UserPollsComponent  {
 
   constructor(private pollService: PollService, private authService: AuthenticationService) { }
 
-  getUserId() {
-    this.pollService.getUserId();
-  }
+  // getUserId() {
+  //   this.pollService.getUserId();
+  // }
 
   ngDoCheck() {
     this.user = firebase.auth().currentUser;

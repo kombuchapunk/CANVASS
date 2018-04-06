@@ -1,17 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../authentication.service';
 import { AngularFireAuth } from 'angularfire2/auth';
-import { PollService } from '../poll.service'
+import { PollService } from '../poll.service';
+import { FirebaseListObservable } from 'angularfire2/database';
 @Component({
   selector: 'app-authentication',
   templateUrl: './authentication.component.html',
   styleUrls: ['./authentication.component.css'],
-  providers: [AuthenticationService]
+  providers: [AuthenticationService, PollService]
 })
 export class AuthenticationComponent implements OnInit {
 
   login = true;
   userId: string;
+  polls: FirebaseListObservable<any[]>;
 
   constructor(public authService: AuthenticationService, private afAuth: AngularFireAuth, public pollService: PollService) {
     // this.authService.user.subscribe(user => {
@@ -20,15 +22,16 @@ export class AuthenticationComponent implements OnInit {
   }
 
   ngOnInit() {
+    
   }
 
   loginGoogle() {
     this.authService.loginGoogle();
   }
 
-  getUserId() {
-    this.authService.currentUserId();
-  }
+  // getUserId() {
+  //   this.authService.currentUserId();
+  // }
 
   loginEmail(email, password) {
     this.authService.loginEmail(email, password);
