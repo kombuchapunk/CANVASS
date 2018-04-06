@@ -1,0 +1,16 @@
+{ "polls": [{
+  "question": "Ice cream flavor?",
+  "choice1": "Chocolate",
+  "choice2": "Vanilla",
+  "choice1Counter": 10,
+  "choice2Counter": 8,
+  "userId": "0"
+  }, {
+  "question": "Beer or Wine?",
+  "choice1": "Beer",
+  "choice2": "Wine",
+  "choice1Counter": 40,
+  "choice2Counter": 58,
+  "userId": "1"
+  }]
+}

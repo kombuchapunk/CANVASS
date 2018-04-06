@@ -1,0 +1,10 @@
+<div *ngIf="loggedIn">
+  {{userId}}
+  <ul>
+    <li *ngFor="let poll of polls | async">
+      {{poll.question}}
+      {{poll.choice1}}
+      {{poll.choice2}}
+    </li>
+  </ul>
+</div>

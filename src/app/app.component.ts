@@ -1,5 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from './authentication.service';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import { AngularFireAuth } from 'angularfire2/auth';
+
+
 
 @Component({
   selector: 'app-root',
@@ -7,20 +11,14 @@ import { AuthenticationService } from './authentication.service';
   styleUrls: ['./app.component.css'],
   providers: [AuthenticationService]
 })
-export class AppComponent {
-  user;
+export class AppComponent implements OnInit {
+  userId;
 
   constructor(public authService: AuthenticationService) {
-    this.authService.user.subscribe(user =>  {
-      console.log(user);
-    });
+    // this.authService.user.subscribe(user =>  {
+    // });
   }
-
-  login() {
-    this.authService.login();
-  }
-
-  logout() {
-    this.authService.logout();
+  ngOnInit() {
+    // this.userId = this.authService.user.$key;
   }
 }
