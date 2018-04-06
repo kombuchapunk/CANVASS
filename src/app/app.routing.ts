@@ -9,6 +9,10 @@ const appRoutes: Routes = [
     component: PublicComponent
   },
   {
+    path: 'public',
+    component: PublicComponent
+  },
+  {
     path: 'private',
     component: PrivateComponent
   },

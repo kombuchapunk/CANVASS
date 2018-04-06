@@ -4,6 +4,7 @@ import { PollService } from '../poll.service';
 import { FirebaseListObservable } from 'angularfire2/database';
 import { AuthenticationComponent } from '../authentication/authentication.component';
 import { AuthenticationService } from '../authentication.service';
+import * as firebase from "firebase";
 
 @Component({
   selector: 'app-user-polls',
@@ -12,17 +13,25 @@ import { AuthenticationService } from '../authentication.service';
   providers: [PollService, AuthenticationService]
 })
 export class UserPollsComponent  {
-
+  private user;
   polls: FirebaseListObservable<any[]>;
   userId: string;
 
   constructor(private pollService: PollService, private authService: AuthenticationService) { }
 
   getUserId() {
-    this.authService.currentUserId();
+    this.pollService.getUserId();
+  }
+
+  ngDoCheck() {
+    this.user = firebase.auth().currentUser;
   }
 
   getUserPolls() {
     this.pollService.getUserPolls();
+  }
+
+  logout() {
+    this.authService.logout();
   }
 }
