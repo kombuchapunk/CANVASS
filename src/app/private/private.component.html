@@ -1,4 +1,4 @@
-<mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark bg-pink scrolling-navbar ie-nav" [containerInside]="false">
+<mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-light bg-white scrolling-navbar ie-nav" [containerInside]="false">
     <logo>
         <a class="logo navbar-brand" href="#"><strong>POLL</strong></a>
     </logo>
@@ -19,23 +19,28 @@
                 <a class="nav-link">{{userId}}</a>
             </li>
             <li class="nav-item waves-light" mdbRippleRadius>
-                <span (click)="logout()">Log Out</span>
+                <span class="btn btn-sm btn-elegant waves-light" (click)="logout()">Log Out</span>
             </li>
         </ul>
     </links>
 </mdb-navbar>
 <!-- Main -->
 <main>
-    <div class="container" style="height:1300px;">
-        <div class="row mt-5 pt-5">
-            <div class="col text-center">
-                <h2>This Navbar is fixed</h2>
-                <h5>It will always stay visible on the top, even when you scroll down</h5>
-                <br>
-                <p>Full page intro with background image will be always displayed in full screen mode, regardless of device </p>
-            </div>
-        </div>
+  <div class="card">
+
+    <!--Card image-->
+    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(97).jpg" alt="Card image cap">
+
+    <!--Card content-->
+    <div class="card-body">
+        <!--Title-->
+        <h4 class="card-title">Card title</h4>
+        <!--Text-->
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary waves-light" mdbRippleRadius>Button</a>
     </div>
+
+</div>
 </main>
 <!-- /.Main -->
 <app-user-polls></app-user-polls>
