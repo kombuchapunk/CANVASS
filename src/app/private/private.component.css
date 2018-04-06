@@ -1,5 +1,14 @@
-main {
+@media only screen and (max-width: 600px) {
+  #content {
+    width: 100vw !important;
+    height: 100vh !important;
+    margin-top: 0 !important;
+    padding-top: 20vh !important;
+  }
+}
+
+#content {
+  width: 70%;
   margin: 0 auto;
-  margin-top: 20vh;
-  width: 450px;
+  margin-top: 30vh;
 }
