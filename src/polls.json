@@ -6,11 +6,11 @@
   "choice2Counter": 8,
   "userId": "0"
   }, {
-  "question": "Beer or Wine?",
-  "choice1": "Beer",
-  "choice2": "Wine",
-  "choice1Counter": 40,
-  "choice2Counter": 58,
-  "userId": "1"
+  "question": "Juice or Soda?",
+  "choice1": "Juice",
+  "choice2": "Soda",
+  "choice1Counter": 4,
+  "choice2Counter": 2,
+  "userId": "ht5JqP1xWAdYCcEsrzvKUfzoqRG3"
   }]
 }

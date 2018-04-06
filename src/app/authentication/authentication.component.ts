@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../authentication.service';
 import { AngularFireAuth } from 'angularfire2/auth';
-
+import { PollService } from '../poll.service'
 @Component({
   selector: 'app-authentication',
   templateUrl: './authentication.component.html',
@@ -13,7 +13,7 @@ export class AuthenticationComponent implements OnInit {
   login = true;
   userId: string;
 
-  constructor(public authService: AuthenticationService, private afAuth: AngularFireAuth) {
+  constructor(public authService: AuthenticationService, private afAuth: AngularFireAuth, public pollService: PollService) {
     // this.authService.user.subscribe(user => {
     //   if(user) this.userId = user.uid
     // })
@@ -51,4 +51,7 @@ export class AuthenticationComponent implements OnInit {
     this.login = null;
   }
 
+  getUserPolls() {
+    this.pollService.getUserPolls();
+  }
 }
