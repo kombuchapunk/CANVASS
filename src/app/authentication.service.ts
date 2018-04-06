@@ -17,12 +17,11 @@ export class AuthenticationService {
   ) {
       this.user = afAuth.authState;
       this.afAuth.authState.subscribe((auth) => {
-      this.authState = auth
-    });
-    // this.user = afAuth.authState;
-    // this.user.subscribe(user => {
-    //   if(user) this.userId = user.uid
-    // })
+        this.authState = auth
+      });
+      this.user.subscribe(user => {
+        if(user) this.userId = user.uid
+      })
   }
 
   // get currentUserId() {

@@ -1,8 +1,12 @@
 #login {
   width: 350px;
   margin: 0 auto;
-  margin-top: 30vh;
+  margin-top: 25vh;
   color: #fff;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.4) !important;
+}
+
+.form-control {
+  color: #fff !important;
 }
