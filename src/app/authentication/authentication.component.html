@@ -10,8 +10,8 @@
         <label for="exampleInputPassword1">Password</label>
         <input type="password" class="form-control" id="password" #password placeholder="Password">
       </div>
-      <button (click)="loginEmail(email.value, password.value); email.value=''; password.value='';" class="btn btn-indigo waves-light">Sign In</button>
-      <button (click)="motherfuckerOut()" class="btn btn-indigo waves-light">Sign up</button>
+      <button (click)="loginEmail(email.value, password.value); email.value=''; password.value='';" class="btn btn-mdb-color waves-light">Sign In</button>
+      <button (click)="motherfuckerOut()" class="btn btn-blue-grey waves-light">Sign up</button>
       <span (click)="loginGoogle(); email.value=''; password.value='';" id="google_btn"><img src="assets/btn_google.png"></span>
     </form>
   </div>
@@ -29,8 +29,8 @@
         <label for="password">Password</label>
         <input type="password" class="form-control" id="password" #password placeholder="Password">
       </div>
-      <button (click)="signUp(email.value, password.value); email.value=''; password.value='';" class="btn btn-indigo waves-light">Submit</button>
+      <button (click)="signUp(email.value, password.value); email.value=''; password.value='';" class="btn btn-mdb-color waves-light">Sign Up</button>
+      <span (click)="motherfuckerIn()" class="btn btn-blue-grey waves-light">Sign In</span>
     </form>
-    <span (click)="motherfuckerIn()">Sign in?</span>
   </div>
 </div>
