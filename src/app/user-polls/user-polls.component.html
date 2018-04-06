@@ -1,6 +1,5 @@
 <span (click)="logout()">Log Out</span>
 <div *ngIf="user">
-  {{getUserId() | async}}
   <ul>
     <li *ngFor="let poll of polls | async">
       {{poll.question | async}}
