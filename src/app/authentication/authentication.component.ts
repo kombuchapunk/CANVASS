@@ -3,6 +3,7 @@ import { AuthenticationService } from '../authentication.service';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { PollService } from '../poll.service';
 import { FirebaseListObservable } from 'angularfire2/database';
+import { AngularFireDatabase } from 'angularfire2/database'
 @Component({
   selector: 'app-authentication',
   templateUrl: './authentication.component.html',
@@ -15,23 +16,17 @@ export class AuthenticationComponent implements OnInit {
   userId: string;
   polls: FirebaseListObservable<any[]>;
 
-  constructor(public authService: AuthenticationService, private afAuth: AngularFireAuth, public pollService: PollService) {
-    // this.authService.user.subscribe(user => {
-    //   if(user) this.userId = user.uid
-    // })
+  constructor(private db: AngularFireDatabase, public authService: AuthenticationService, private afAuth: AngularFireAuth, public pollService: PollService) {
+    this.polls = db.list('polls')
   }
 
   ngOnInit() {
-    
+
   }
 
   loginGoogle() {
     this.authService.loginGoogle();
   }
-
-  // getUserId() {
-  //   this.authService.currentUserId();
-  // }
 
   loginEmail(email, password) {
     this.authService.loginEmail(email, password);

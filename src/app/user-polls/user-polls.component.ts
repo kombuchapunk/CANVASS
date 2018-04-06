@@ -17,19 +17,17 @@ export class UserPollsComponent  {
   polls: FirebaseListObservable<any[]>;
   userId: string;
 
-  constructor(private pollService: PollService, private authService: AuthenticationService) { }
+  constructor(private pollService: PollService, private authService: AuthenticationService) {
 
-  // getUserId() {
-  //   this.pollService.getUserId();
-  // }
+  }
 
   ngDoCheck() {
     this.user = firebase.auth().currentUser;
   }
 
-  getUserPolls() {
-    this.pollService.getUserPolls();
-  }
+  // getUserPolls() {
+  //   this.pollService.getUserPolls();
+  // }
 
   logout() {
     this.authService.logout();

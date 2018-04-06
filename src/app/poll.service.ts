@@ -20,7 +20,7 @@ export class PollService {
   //   return this.authService.currentUserId();
   // }
 
-  getUserPolls(): FirebaseListObservable<Poll[]> {
+  getUserPolls(): FirebaseListObservable<any[]> {
     return this.polls;
   }
 }
