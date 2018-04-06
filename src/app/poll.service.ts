@@ -12,15 +12,16 @@ export class PollService {
   userId: string;
 
   constructor(private db: AngularFireDatabase, private authService: AuthenticationService) {
-    this.polls = db.list('polls');
-    // this.userId = this.authService.currentUserId();
+    this.polls = this.db.list('polls');
   }
 
+  // getAllPolls(): FirebaseListObservable<Poll[]> {
+  //   return this.polls;
+  // }
   // getUserId() {
   //   return this.authService.currentUserId();
   // }
-
-  getUserPolls(): FirebaseListObservable<any[]> {
-    return this.polls;
-  }
+  // getUserPolls(): FirebaseListObservable<Poll[]> {
+  //   return this.polls;
+  // }
 }

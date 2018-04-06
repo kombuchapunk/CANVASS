@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Poll } from '../poll.model'
 import { AuthenticationService } from '../authentication.service';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { PollService } from '../poll.service';
@@ -17,11 +18,10 @@ export class AuthenticationComponent implements OnInit {
   polls: FirebaseListObservable<any[]>;
 
   constructor(private db: AngularFireDatabase, public authService: AuthenticationService, private afAuth: AngularFireAuth, public pollService: PollService) {
-    this.polls = db.list('polls')
   }
 
   ngOnInit() {
-
+    this.polls = this.pollService.polls;
   }
 
   loginGoogle() {
@@ -49,7 +49,8 @@ export class AuthenticationComponent implements OnInit {
     this.login = null;
   }
 
-  getUserPolls() {
-    this.pollService.getUserPolls();
-  }
+  // getAllPolls(): FirebaseListObservable<Poll[]> {
+  //   this.polls = this.db.list('polls');
+  //   return this.polls;
+  // }
 }
