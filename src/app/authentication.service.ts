@@ -12,11 +12,11 @@ export class AuthenticationService {
   authState: any = null;
 
   constructor(
-    private afAuth: AngularFireAuth,
+    public afAuth: AngularFireAuth,
     private db: AngularFireDatabase,
-  )
-  {
-    this.afAuth.authState.subscribe((auth) => {
+  ) {
+      this.user = afAuth.authState;
+      this.afAuth.authState.subscribe((auth) => {
       this.authState = auth
     });
     // this.user = afAuth.authState;
@@ -49,18 +49,7 @@ export class AuthenticationService {
         }
         // Sign in with email and pass.
         // [START authwithemail]
-        firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-          // Handle Errors here.
-          var errorCode = error.code;
-          var errorMessage = error.message;
-          // [START_EXCLUDE]
-          if (errorCode === 'auth/wrong-password') {
-            alert('Wrong password.');
-          } else {
-            alert(errorMessage);
-          }
-          // [END_EXCLUDE]
-        });
+        firebase.auth().signInWithEmailAndPassword(email, password)
         // [END authwithemail]
       }
   }
@@ -76,19 +65,7 @@ export class AuthenticationService {
     }
     // Sign in with email and pass.
     // [START createwithemail]
-    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-      // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      // [START_EXCLUDE]
-      if (errorCode == 'auth/weak-password') {
-        alert('The password is too weak.');
-      } else {
-        alert(errorMessage);
-      }
-      console.log(error);
-      // [END_EXCLUDE]
-    });
+    firebase.auth().createUserWithEmailAndPassword(email, password)
   }
 
   logout() {

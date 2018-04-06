@@ -11,16 +11,18 @@ import { AuthenticationService } from '../authentication.service';
   styleUrls: ['./user-polls.component.css'],
   providers: [PollService, AuthenticationService]
 })
-export class UserPollsComponent implements OnInit {
+export class UserPollsComponent  {
 
   polls: FirebaseListObservable<any[]>;
   userId: string;
 
   constructor(private pollService: PollService, private authService: AuthenticationService) { }
 
-  ngOnInit() {
-    this.userId = this.authService.currentUserId();
-    this.polls = this.pollService.getUserPolls();
+  getUserId() {
+    this.authService.currentUserId();
   }
 
+  getUserPolls() {
+    this.pollService.getUserPolls();
+  }
 }

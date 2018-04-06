@@ -16,6 +16,6 @@ export class PollService {
   }
 
   getUserPolls(): FirebaseListObservable<Poll[]> {
-    return this.db.list(`polls/${this.userId}`);
+    return this.db.list(`polls`);
   }
 }
