@@ -18,7 +18,6 @@ export class UserPollsComponent  {
   userId: string;
 
   constructor(private pollService: PollService, private authService: AuthenticationService) {
-
   }
 
   ngDoCheck() {

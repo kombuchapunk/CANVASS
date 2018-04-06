@@ -1,10 +1,11 @@
 <div *ngIf="user">
   <span (click)="logout()">Log Out</span>
+  <span>{{user.uid}}</span>
   <ul>
     <li *ngFor="let poll of polls | async">
-      {{poll.question | async}}
-      {{poll.choice1 | async}}
-      {{poll.choice2 | async}}
+      {{ poll.question }}
+      {{ poll.choice1 }}
+      {{ poll.choice2 }}
     </li>
   </ul>
 </div>
