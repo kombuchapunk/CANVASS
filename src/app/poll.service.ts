@@ -15,13 +15,8 @@ export class PollService {
     this.polls = this.db.list('polls');
   }
 
-  // getAllPolls(): FirebaseListObservable<Poll[]> {
-  //   return this.polls;
-  // }
-  // getUserId() {
-  //   return this.authService.currentUserId();
-  // }
-  // getUserPolls(): FirebaseListObservable<Poll[]> {
-  //   return this.polls;
-  // }
+  getAllPolls(): FirebaseListObservable<Poll[]> {
+    return this.polls;
+  }
+
 }

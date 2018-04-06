@@ -21,7 +21,7 @@ export class AuthenticationComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.polls = this.pollService.polls;
+    this.polls = this.pollService.getAllPolls();
   }
 
   loginGoogle() {
@@ -48,9 +48,4 @@ export class AuthenticationComponent implements OnInit {
   motherfuckerOut() {
     this.login = null;
   }
-
-  // getAllPolls(): FirebaseListObservable<Poll[]> {
-  //   this.polls = this.db.list('polls');
-  //   return this.polls;
-  // }
 }
