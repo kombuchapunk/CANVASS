@@ -2,11 +2,7 @@
   width: 350px;
   margin: 0 auto;
   margin-top: 25vh;
-  color: #fff;
+  color: rgba(0, 0, 0, 0.9);
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.4) !important;
-}
-
-.form-control {
-  color: #fff !important;
+  background-color: rgba(255, 255, 255, 0.8) !important;
 }
