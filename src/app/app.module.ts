@@ -16,6 +16,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { AddPollComponent } from './add-poll/add-poll.component';
 import { AuthenticationService } from './authentication.service';
 import { TopbarComponent } from './topbar/topbar.component';
+import { ProfileComponent } from './profile/profile.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -33,7 +34,8 @@ export const firebaseConfig = {
     LoginComponent,
     FeedComponent,
     AddPollComponent,
-    TopbarComponent
+    TopbarComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
