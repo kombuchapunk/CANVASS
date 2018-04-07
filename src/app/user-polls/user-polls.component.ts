@@ -23,7 +23,7 @@ export class UserPollsComponent implements OnInit {
 
   ngOnInit() {
     this.polls = this.pollService.getAllPolls();
-    console.log(this.randomGradient());
+    //this.gradient = this.randomGradient();
   }
 
   ngDoCheck() {
@@ -31,7 +31,10 @@ export class UserPollsComponent implements OnInit {
   }
 
   randomGradient() {
-    return (this.gradientList[Math.floor(Math.random() * 10)] + ", " + this.gradientList[Math.floor(Math.random() * 10)]);
+    let style = 'linear-gradient(' + this.gradientList[Math.floor(Math.random() * 10)] + ',' + this.gradientList[Math.floor(Math.random() * 10)] + ')';
+    return {
+      "background" : style
+    }
   }
 
   // getUserPolls() {

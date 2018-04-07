@@ -1,9 +1,9 @@
 <div *ngIf="user">
 
-  <div class="card post" *ngFor="let poll of polls | async">
+  <div *ngFor="let poll of polls | async" class="post">
     <!--Question Gradient-->
     <div class="view hm-white-slight waves-light" mdbRippleRadius>
-      <div id="gradient" styles="background: linear-gradient({{randomGradient()}});">
+      <div id="gradient" [ngStyle]="randomGradient()">
         {{poll.question}}
       </div>
       <a><div class="mask"></div></a>
