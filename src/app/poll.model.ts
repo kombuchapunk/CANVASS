@@ -7,6 +7,7 @@ export class Poll {
     public choice2img: string,
     public choice1Counter: number,
     public choice2Counter: number,
+    public date: string,
     public userId: string
   ) {}
 }
