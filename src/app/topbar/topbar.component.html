@@ -5,13 +5,13 @@
     <links>
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active waves-light" mdbRippleRadius>
-                <a class="nav-link">Feed <span class="sr-only">(current)</span></a>
+                <a href="feed" class="nav-link">Feed <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item waves-light" mdbRippleRadius>
                 <a class="nav-link">My Polls</a>
             </li>
             <li class="nav-item waves-light" mdbRippleRadius>
-                <a class="nav-link">Profile</a>
+                <a href="profile" class="nav-link">Profile</a>
             </li>
         </ul>
         <ul class="navbar-nav nav-flex-icons">
@@ -19,7 +19,7 @@
                 <a class="nav-link">{{userId}}</a>
             </li>
             <li class="nav-item waves-light" mdbRippleRadius>
-                <span class="btn btn-sm btn-elegant waves-light" mdbRippleRadius>ask</span>
+                <a href="/ask" class="btn btn-sm btn-elegant waves-light" mdbRippleRadius>ask</a>
             </li>
             <li class="nav-item waves-light" mdbRippleRadius>
                 <span class="btn btn-sm btn-outline-secondary" (click)="logout()">Log Out</span>
