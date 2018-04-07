@@ -1,20 +1,20 @@
 import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PublicComponent } from './public/public.component';
-import { PrivateComponent } from './private/private.component';
+import { LoginComponent } from './login/login.component';
+import { FeedComponent } from './feed/feed.component';
 
 const appRoutes: Routes = [
   {
     path: '',
-    component: PublicComponent
+    component: LoginComponent
   },
   {
     path: 'login',
-    component: PublicComponent
+    component: LoginComponent
   },
   {
     path: 'feed',
-    component: PrivateComponent
+    component: FeedComponent
   },
 ];
 

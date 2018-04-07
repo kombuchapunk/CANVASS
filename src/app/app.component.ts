@@ -19,10 +19,10 @@ export class AppComponent implements OnInit {
     this.authService.user.subscribe(user => {
       if (user == null) {
         this.isLoggedIn = false;
-        this.router.navigate(['public']);
+        this.router.navigate(['login']);
       } else {
         this.isLoggedIn = true;
-        this.router.navigate(['private']);
+        this.router.navigate(['feed']);
       }
     });
   }

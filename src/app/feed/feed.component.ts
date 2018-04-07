@@ -8,14 +8,17 @@ import { AuthenticationService } from '../authentication.service';
   imports: [MatTabsModule]
 })
 @Component({
-  selector: 'app-private',
-  templateUrl: './private.component.html',
-  styleUrls: ['./private.component.css'],
+  selector: 'app-feed',
+  templateUrl: './feed.component.html',
+  styleUrls: ['./feed.component.css'],
   providers: [AuthenticationService]
 })
-export class PrivateComponent {
+export class FeedComponent {
   private user;
   private userId;
+  // public isAddNew;
+  // public isFeed;
+  // public isProfile;
 
   constructor(private authService: AuthenticationService) { }
 
@@ -27,5 +30,11 @@ export class PrivateComponent {
   logout() {
     this.authService.logout();
   }
+
+  // pressFeed() {
+  //   this.isFeed = true;
+  //   this.isAddNew = false;
+  //   this.isProfile = false;
+  // }
 
 }

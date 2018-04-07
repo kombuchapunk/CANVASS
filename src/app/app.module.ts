@@ -9,10 +9,12 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { masterFirebaseConfig } from './api-keys';
 import { AuthenticationComponent } from './authentication/authentication.component';
 import { UserPollsComponent } from './user-polls/user-polls.component';
-import { PublicComponent } from './public/public.component';
-import { PrivateComponent } from './private/private.component';
+import { LoginComponent } from './login/login.component';
+import { FeedComponent } from './feed/feed.component';
 import { routing } from './app.routing';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { AddPollComponent } from './add-poll/add-poll.component';
+import { AuthenticationService } from './authentication.service';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -27,8 +29,9 @@ export const firebaseConfig = {
     AppComponent,
     AuthenticationComponent,
     UserPollsComponent,
-    PublicComponent,
-    PrivateComponent
+    LoginComponent,
+    FeedComponent,
+    AddPollComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,7 @@ export const firebaseConfig = {
     MDBBootstrapModule.forRoot()
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
-  providers: [],
+  providers: [AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
