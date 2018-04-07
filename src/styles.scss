@@ -1,12 +1,32 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.scss";
+
 html, body {
   height: 100%;
-  overflow: hidden;
 }
 
 body {
-  background-image: linear-gradient(60deg, #3d3393 0%, #2b76b9 37%, #2cacd1 65%, #35eb93 100%);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: linear-gradient(131deg, #3d3393, #2b76b9, #2cacd1, #f093fb);
+  background-size: 800% 800%;
+
+  -webkit-animation: AnimationName 19s ease infinite;
+  -moz-animation: AnimationName 19s ease infinite;
+  animation: AnimationName 19s ease infinite;
+
+  @-webkit-keyframes AnimationName {
+      0%{background-position:0% 49%}
+      50%{background-position:100% 52%}
+      100%{background-position:0% 49%}
+  }
+  @-moz-keyframes AnimationName {
+      0%{background-position:0% 49%}
+      50%{background-position:100% 52%}
+      100%{background-position:0% 49%}
+  }
+  @keyframes AnimationName {
+      0%{background-position:0% 49%}
+      50%{background-position:100% 52%}
+      100%{background-position:0% 49%}
+  }
 }
 
 .btn-indigo {
