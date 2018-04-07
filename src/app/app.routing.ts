@@ -9,11 +9,11 @@ const appRoutes: Routes = [
     component: PublicComponent
   },
   {
-    path: 'public',
+    path: 'login',
     component: PublicComponent
   },
   {
-    path: 'private',
+    path: 'feed',
     component: PrivateComponent
   },
 ];
