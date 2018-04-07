@@ -1,10 +1,17 @@
-<!-- <div *ngIf="user">
-  <span>{{user.uid}}</span>
-  <ul>
-    <li *ngFor="let poll of polls | async">
-      {{ poll.question }}
-      {{ poll.choice1 }}
-      {{ poll.choice2 }}
-    </li>
-  </ul>
-</div> -->
+<div *ngIf="user">
+
+  <div class="card post" *ngFor="let poll of polls | async">
+    <!--Question Gradient-->
+    <div class="view hm-white-slight waves-light" mdbRippleRadius>
+      <div id="gradient" styles="background: linear-gradient({{randomGradient()}});">
+        {{poll.question}}
+      </div>
+      <a><div class="mask"></div></a>
+    </div>
+    <!--Post content content-->
+    <div class="card-body">
+
+    </div>
+  </div>
+
+</div>
