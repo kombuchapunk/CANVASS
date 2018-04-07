@@ -15,6 +15,7 @@ import { routing } from './app.routing';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { AddPollComponent } from './add-poll/add-poll.component';
 import { AuthenticationService } from './authentication.service';
+import { TopbarComponent } from './topbar/topbar.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -31,7 +32,8 @@ export const firebaseConfig = {
     UserPollsComponent,
     LoginComponent,
     FeedComponent,
-    AddPollComponent
+    AddPollComponent,
+    TopbarComponent
   ],
   imports: [
     BrowserModule,
