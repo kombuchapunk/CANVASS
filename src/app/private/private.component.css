@@ -3,12 +3,13 @@
     width: 100vw !important;
     height: 100vh !important;
     margin-top: 0 !important;
-    padding-top: 20vh !important;
+    padding-top: 6vh !important;
   }
 }
 
 #content {
-  width: 70%;
+  width: 50%;
+  max-width: 800px;
   margin: 0 auto;
-  margin-top: 30vh;
+  margin-top: 20vh;
 }
