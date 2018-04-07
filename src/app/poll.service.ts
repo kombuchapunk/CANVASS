@@ -10,6 +10,8 @@ import { AuthenticationComponent } from './authentication/authentication.compone
 export class PollService {
   polls: FirebaseListObservable<any[]>;
   userId: string;
+  userPolls: FirebaseListObservable<any[]>;
+  providers: [AuthenticationService];
 
   constructor(private db: AngularFireDatabase, private authService: AuthenticationService) {
     this.polls = this.db.list('polls');
@@ -18,5 +20,9 @@ export class PollService {
   getAllPolls(): FirebaseListObservable<Poll[]> {
     return this.polls;
   }
+  // getUserPolls(): FirebaseListObservable<Poll[]> {
+  //   let userId = this.authService.userId;
+  //   return this.userPolls;
+  // }
 
 }

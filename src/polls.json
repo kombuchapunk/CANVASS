@@ -2,15 +2,21 @@
   "question": "Ice cream flavor?",
   "choice1": "Chocolate",
   "choice2": "Vanilla",
-  "choice1Counter": 10,
-  "choice2Counter": 8,
-  "userId": "0"
+  "choice1img": "https://chocolatecoveredkatie.com/wp-content/uploads/2017/02/nice-cream.jpg",
+  "choice2img": "https://www.williams-sonoma.com/wsimgs/ab/images/dp/recipe/201803/0020/img84l.jpg",
+  "choice1Counter": 0,
+  "choice2Counter": 0,
+  "date": "April 6, 2018",
+  "userId": "7RksTgMxVzZbumJhyTxiDohywr32"
   }, {
-  "question": "Juice or Soda?",
-  "choice1": "Juice",
-  "choice2": "Soda",
-  "choice1Counter": 4,
-  "choice2Counter": 2,
+  "question": "What should I drink tonight?",
+  "choice1": "Beer",
+  "choice2": "Wine",
+  "choice1img": "https://cdn.craftbeer.com/wp-content/uploads/fall-beer-stein.jpg",
+  "choice2img": "https://draxe.com/wp-content/uploads/2017/05/RedWineBackground.jpg",
+  "choice1Counter": 0,
+  "choice2Counter": 0,
+  "date": "April 7, 2018",
   "userId": "ht5JqP1xWAdYCcEsrzvKUfzoqRG3"
   }]
 }

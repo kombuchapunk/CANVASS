@@ -1,11 +1,10 @@
 <div *ngIf="user">
-
   <div *ngFor="let poll of polls | async" class="card post">
     <!--Topbar-->
     <div id="topbar">
       <div class="row">
         <div class="col" id="username">
-          <span>@username</span>
+          <span>@{{poll.userId}}</span>
         </div>
         <div class="col" id="date">
           <span>{{poll.date}}</span>

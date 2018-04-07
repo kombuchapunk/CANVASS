@@ -15,6 +15,7 @@ import * as firebase from "firebase";
 export class UserPollsComponent implements OnInit {
   private user;
   polls: FirebaseListObservable<any[]>;
+  userPolls: FirebaseListObservable<any[]>;
   gradient: object;
   userId: string;
   gradientList=["#ff758c", "#50c9c3", "#ffc3a0", "#614385", "#43cea2", "#f4e2d8", "#ffd89b", "#19547b", "#c4e0e5", "#ffedbc"];
@@ -24,11 +25,13 @@ export class UserPollsComponent implements OnInit {
 
   ngOnInit() {
     this.polls = this.pollService.getAllPolls();
+    // this.userPolls = this.pollService.getUserPolls();
     this.gradient = this.randomGradient();
   }
 
   ngDoCheck() {
     this.user = firebase.auth().currentUser;
+    this.userId = this.user.uid;
   }
 
   getGradient() {
@@ -47,8 +50,8 @@ export class UserPollsComponent implements OnInit {
   }
 
   // getUserPolls() {
-  //   this.pollService.getUserPolls();
-  // }
+  //   this.p;
+  //  }
 
   logout() {
     this.authService.logout();

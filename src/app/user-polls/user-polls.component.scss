@@ -7,6 +7,9 @@
   .btn_choice {
     font-size: 3em !important;
   }
+  #topbar {
+    font-size: 0.6em !important;
+  }
 }
 .post {
   margin-bottom: 50px;
@@ -15,11 +18,12 @@
 }
 
 #topbar {
-  height: 60px;
-  line-height: 60px;
+  height: 70px;
+  line-height: 70px;
   padding-left: 20px;
   position: relative;
   display: inline;
+  font-size: 0.8em;
 }
 
 #date {
