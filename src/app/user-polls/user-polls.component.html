@@ -1,6 +1,17 @@
 <div *ngIf="user">
 
-  <div *ngFor="let poll of polls | async" class="post">
+  <div *ngFor="let poll of polls | async" class="card post">
+    <!--Topbar-->
+    <div id="topbar">
+      <div class="row">
+        <div class="col" id="username">
+          <span>@username</span>
+        </div>
+        <div class="col" id="date">
+          <span>{{poll.date}}</span>
+        </div>
+      </div>
+    </div>
     <!--Question Gradient-->
     <div class="view hm-white-slight waves-light" mdbRippleRadius (click)="randomizeGradient()">
       <div id="gradient" [ngStyle]="getGradient()">
@@ -10,19 +21,12 @@
     </div>
     <!--Post content content-->
     <div class="card-body">
-      <div class="row">
-        <div class="col">
-          <div class="btn_choice">
-            {{poll.choice1}}
-          </div>
-        </div>
-        <div class="col">
-          <div class="btn_choice">
-            {{poll.choice2}}
-          </div>
-        </div>
+      <div class="btn_choice" [ngStyle]="{'background':'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(' + poll.choice1img + ')'}">
+        {{poll.choice1}}
+      </div>
+      <div class="btn_choice" [ngStyle]="{'background':'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(' + poll.choice2img + ')'}">
+        {{poll.choice2}}
       </div>
     </div>
   </div>
-
 </div>

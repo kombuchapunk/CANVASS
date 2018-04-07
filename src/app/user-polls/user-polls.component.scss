@@ -1,36 +1,67 @@
 @media only screen and (max-width: 600px) {
   .post {
     margin-bottom: 0px !important;
+    font-size: 16pt !important;
+    border-radius: 0 !important;
   }
   .btn_choice {
-    width: 120px !important;
-    height: 120px !important;
+    font-size: 3em !important;
   }
 }
 .post {
   margin-bottom: 50px;
   width: 100% !important;
-  background-color: rgba(255,255,255,0.85);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+#topbar {
+  height: 60px;
+  line-height: 60px;
+  padding-left: 20px;
+  position: relative;
+  display: inline;
+}
+
+#date {
+  text-align: right;
+  margin-right: 20px;
+}
+
+#username {
+  text-align: left;
+  font-family: 'Bitter', serif;
+  font-size: 1.2em;
 }
 
 #gradient {
   padding: 50px;
-  font-size: 3.5em;
+  font-size: 3.7em;
   font-weight: bold;
+  line-height: 90px;
   font-family: 'Crete Round', serif;
   color: rgba(0,0,0,9);
 }
 
 .card-body {
-  background-color: #fff !important;
+  background-color: rgba(255,255,255,0.9) !important;
+  padding: 0;
+  margin: 0;
 }
 
 .btn_choice {
   display: block;
   cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.4);
-  width: 300px;
-  height: 300px;
-  border-radius: 200px;
+  width: 100%;
+  height: auto;
   margin: 0 auto;
+  color: #fff;
+  font-family: 'Crete Round', serif;
+  text-align: center;
+  font-size: 5em;
+  position:relative;
+}
+
+.btn_choice:hover {
+  //background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.3)) !important;
+  background-blend-mode:lighten !important;
 }
