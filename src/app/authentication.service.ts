@@ -24,10 +24,6 @@ export class AuthenticationService {
       })
   }
 
-  // get currentUserId() {
-  //   return this.authState.uid;
-  // }
-
   loginGoogle() {
     this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
   }
