@@ -1,3 +1,12 @@
+@media only screen and (max-width: 600px) {
+  .post {
+    margin-bottom: 0px !important;
+  }
+  .btn_choice {
+    width: 120px !important;
+    height: 120px !important;
+  }
+}
 .post {
   margin-bottom: 50px;
   width: 100% !important;
@@ -6,8 +15,22 @@
 
 #gradient {
   padding: 50px;
-  font-size: 3em;
+  font-size: 3.5em;
   font-weight: bold;
   font-family: 'Crete Round', serif;
   color: rgba(0,0,0,9);
+}
+
+.card-body {
+  background-color: #fff !important;
+}
+
+.btn_choice {
+  display: block;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 300px;
+  height: 300px;
+  border-radius: 200px;
+  margin: 0 auto;
 }
