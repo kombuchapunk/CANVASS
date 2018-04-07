@@ -8,12 +8,19 @@
 }
 
 #google_btn {
+  display: block;
+  width: 191px;
+  height: 46px;
   border: 0;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 0;
+  background: url('assets/btn_google.png');
   cursor: pointer;
 }
 
 #google_btn:hover {
   border: 0;
-  box-shadow: 2 2 2 2 black;
   cursor: pointer;
+  background: url('assets/btn_google_focus.png');
 }
