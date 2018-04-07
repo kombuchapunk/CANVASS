@@ -4,16 +4,17 @@ import { NgModule } from '@angular/core'
 import * as firebase from "firebase";
 import { AuthenticationService } from '../authentication.service';
 
+@Component({
+  selector: 'app-topbar',
+  templateUrl: './topbar.component.html',
+  styleUrls: ['./topbar.component.scss'],
+  providers: [AuthenticationService]
+})
 @NgModule({
   imports: [MatTabsModule]
 })
-@Component({
-  selector: 'app-feed',
-  templateUrl: './feed.component.html',
-  styleUrls: ['./feed.component.css'],
-  providers: [AuthenticationService]
-})
-export class FeedComponent {
+
+export class TopbarComponent {
   private user;
   private userId;
   // public isAddNew;
@@ -25,6 +26,10 @@ export class FeedComponent {
   ngDoCheck() {
     this.user = firebase.auth().currentUser;
     this.userId = this.user.uid;
+  }
+
+  logout() {
+    this.authService.logout();
   }
 
   // pressFeed() {
