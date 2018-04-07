@@ -1,3 +1,6 @@
+<div id="logo">
+  &#123;canvass&#125;
+</div>
 <div *ngIf="login" id="login" class="card bg-light mb-3">
   <div class="card-header">Sign In</div>
   <div class="card-body">
@@ -29,8 +32,8 @@
         <label for="password">Password</label>
         <input type="password" class="form-control" id="password" #password placeholder="Password">
       </div>
-      <button (click)="signUp(email.value, password.value); email.value=''; password.value='';" class="btn btn-mdb-color waves-light">Sign Up</button>
       <span (click)="motherfuckerIn()" class="btn btn-blue-grey waves-light">Sign In</span>
+      <button (click)="signUp(email.value, password.value); email.value=''; password.value='';" class="btn btn-mdb-color waves-light">Sign Up</button>
     </form>
   </div>
 </div>
