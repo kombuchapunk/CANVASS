@@ -5,6 +5,9 @@
     margin-top: 0 !important;
     padding-top: 55px !important;
   }
+  .add {
+    height: 100vh !important;
+  }
 }
 
 #content {
@@ -16,4 +19,8 @@
 
 .card-body {
   padding: 35px !important;
+}
+
+.add {
+  background-color: rgba(255,255,255,0.5) !important;
 }
