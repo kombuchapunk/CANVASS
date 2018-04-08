@@ -4,6 +4,7 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AuthenticationService } from './authentication.service';
 import { AuthenticationComponent } from './authentication/authentication.component';
+import { Router } from '@angular/router';
 
 
 @Injectable()
@@ -13,7 +14,7 @@ export class PollService {
   userPolls: FirebaseListObservable<any[]>;
   providers: [AuthenticationService];
 
-  constructor(private db: AngularFireDatabase, private authService: AuthenticationService) {
+  constructor(private db: AngularFireDatabase, private authService: AuthenticationService, private router: Router) {
     this.polls = this.db.list('polls');
   }
 
@@ -23,6 +24,7 @@ export class PollService {
 
   addPoll(newPoll: Poll) {
     this.polls.push(newPoll);
+    this.router.navigate(['feed']);
   }
   // getUserPolls(): FirebaseListObservable<Poll[]> {
   //   let userId = this.authService.userId;
