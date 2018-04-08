@@ -6,12 +6,12 @@ html, body {
 }
 
 body {
-  background: linear-gradient(310deg, #d9afd9, #97d9e1, #A83279, #D38312);
+  background: linear-gradient(310deg, #8CA6DB, #97d9e1, #FFAFBD, #ffd194, #FF6B6B, #556270);
   background-size: 1000% 1000%;
 
-  -webkit-animation: Gradient 25s ease infinite;
-  -moz-animation: Gradient 25s ease infinite;
-  animation: Gradient 25s ease infinite;
+  -webkit-animation: Gradient 50s ease infinite;
+  -moz-animation: Gradient 50s ease infinite;
+  animation: Gradient 50s ease infinite;
 
   @-webkit-keyframes Gradient {
       0%{background-position:0% 52%}
