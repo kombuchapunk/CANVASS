@@ -6,24 +6,24 @@ html, body {
 }
 
 body {
-  background: linear-gradient(310deg, #d9afd9, #97d9e1);
-  background-size: 400% 400%;
+  background: linear-gradient(310deg, #d9afd9, #97d9e1, #A83279, #D38312);
+  background-size: 1000% 1000%;
 
-  -webkit-animation: AnimationName 14s ease infinite;
-  -moz-animation: AnimationName 14s ease infinite;
-  animation: AnimationName 14s ease infinite;
+  -webkit-animation: Gradient 25s ease infinite;
+  -moz-animation: Gradient 25s ease infinite;
+  animation: Gradient 25s ease infinite;
 
-  @-webkit-keyframes AnimationName {
+  @-webkit-keyframes Gradient {
       0%{background-position:0% 52%}
       50%{background-position:100% 49%}
       100%{background-position:0% 52%}
   }
-  @-moz-keyframes AnimationName {
+  @-moz-keyframes Gradient {
       0%{background-position:0% 52%}
       50%{background-position:100% 49%}
       100%{background-position:0% 52%}
   }
-  @keyframes AnimationName {
+  @keyframes Gradient {
       0%{background-position:0% 52%}
       50%{background-position:100% 49%}
       100%{background-position:0% 52%}
