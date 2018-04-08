@@ -38,7 +38,7 @@
           </div>
 
           <div class="text-center">
-              <button class="btn btn-outline-secondary waves-light" mdbRippleRadius>ASK<i class="fa fa-rocket ml-1"></i></button>
+              <button (click)="submitForm(question.value, choice1.value, choice1img.value, choice2.value, choice2img.value); question.value=''; choice1.value=''; choice1img.value=''; choice2.value=''; choice2img.value='';" class="btn btn-outline-secondary waves-light" mdbRippleRadius>ASK<i class="fa fa-rocket ml-1"></i></button>
           </div>
 
       </form>

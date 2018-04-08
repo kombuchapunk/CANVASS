@@ -20,6 +20,10 @@ export class PollService {
   getAllPolls(): FirebaseListObservable<Poll[]> {
     return this.polls;
   }
+
+  addPoll(newPoll: Poll) {
+    this.polls.push(newPoll);
+  }
   // getUserPolls(): FirebaseListObservable<Poll[]> {
   //   let userId = this.authService.userId;
   //   return this.userPolls;
