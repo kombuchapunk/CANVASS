@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AuthenticationService } from '../authentication.service'
+import { Routes, Router } from '@angular/router';
 import * as firebase from "firebase";
 
 @Component({
@@ -9,7 +11,13 @@ import * as firebase from "firebase";
 export class LoginComponent {
   private user;
 
-  constructor() {}
+  constructor(public authService: AuthenticationService, private router: Router) {
+    this.authService.user.subscribe(user => {
+      if (user != null) {
+        this.router.navigate(['feed']);
+      }     
+    });
+  }
 
   ngDoCheck() {
     this.user = firebase.auth().currentUser;

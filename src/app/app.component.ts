@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
         this.router.navigate(['login']);
       } else {
         this.isLoggedIn = true;
-        this.router.navigate(['feed']);
+        this.router.navigate([]);
       }
     });
   }
