@@ -1,4 +1,4 @@
-import { Input, Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Poll } from '../poll.model'
 import { PollService } from '../poll.service';
 import { FirebaseListObservable } from 'angularfire2/database';
@@ -14,14 +14,12 @@ import { sum, values } from 'lodash';
   styleUrls: ['./user-polls.component.scss'],
   providers: [PollService, AuthenticationService, VoteService]
 })
-export class UserPollsComponent implements OnInit, OnDestroy {
+export class UserPollsComponent implements OnInit {
 
   choice1count: number = 0;
   choice2count: number = 0;
   userVote: number = 0;
   pollId: string;
-
-  subscription;
 
   private user;
   polls: FirebaseListObservable<any[]>;
@@ -37,11 +35,6 @@ export class UserPollsComponent implements OnInit, OnDestroy {
     this.polls = this.pollService.getAllPolls();
     // this.userPolls = this.pollService.getUserPolls();
     this.gradient = this.randomGradient();
-    this.subscription = this.voteService.getChoice1Votes(this.pollId)
-                      .subscribe(choice1votes  => {
-                        if (firebase.auth().currentUser.uid) this.userVote = choice1votes[firebase.auth().currentUser.uid]
-                        this.choice1count = sum(values(choice1votes))
-                      })
   }
 
   ngDoCheck() {
@@ -80,9 +73,5 @@ export class UserPollsComponent implements OnInit, OnDestroy {
 
   logout() {
     this.authService.logout();
-  }
-
-  ngOnDestroy() {
-    this.subscription.unsubscripe();
   }
 }

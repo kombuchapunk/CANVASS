@@ -20,14 +20,13 @@
     </div>
     <!--Post content content-->
     <div class="card-body">
-      <div class="btn_choice" (click)="voteChoice1(poll.$key)"
-        [ngClass]="{'active' : userVote > 0 }" [ngStyle]="{'background':'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(' + poll.choice1img + ')'}">
+      <button class="btn_choice" (click)="voteChoice1(poll.$key)" [disabled]="userVote > 0" [ngStyle]="{'background':'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(' + poll.choice1img + ')'}">
         {{poll.choice1}}
-      </div>
-      <div class="btn_choice" (click)="voteChoice2(poll.$key)"
+      </button>
+      <button class="btn_choice" (click)="voteChoice2(poll.$key)"
         [ngClass]="{'active' : userVote > 0 }" [ngStyle]="{'background':'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(' + poll.choice2img + ')'}">
         {{poll.choice2}}
-      </div>
+      </button>
     </div>
   </div>
 </div>
