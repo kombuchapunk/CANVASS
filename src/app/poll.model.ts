@@ -9,6 +9,6 @@ export class Poll {
     public choice2Counter: number,
     public date: string,
     public userId: string,
-    public username: string
+    public userName: string
   ) {}
 }
