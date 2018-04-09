@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { FeedComponent } from './feed/feed.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AddPollComponent } from './add-poll/add-poll.component';
+import { MyPollsComponent } from './my-polls/my-polls.component';
 
 const appRoutes: Routes = [
   {
@@ -17,6 +18,10 @@ const appRoutes: Routes = [
   {
     path: 'feed',
     component: FeedComponent
+  },
+  {
+    path: 'my-polls',
+    component: MyPollsComponent
   },
   {
     path: 'profile',
