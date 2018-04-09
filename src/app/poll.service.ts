@@ -38,7 +38,12 @@ export class PollService {
         orderByChild: 'userId',
         equalTo: this.userId
       }
-    });
+    })
+    console.log(this.userId);
+    console.log(this.userId);
+    console.log(this.userId);
+    console.log(this.userId);
+    console.log(this.userId);
     return this.myPolls;
   }
 
