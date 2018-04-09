@@ -1,5 +1,5 @@
 <div *ngIf="user">
-  <div *ngFor="let poll of polls | async" class="card post">
+  <div *ngFor="let poll of polls | async" class="card post" [hidden]="isDisabled(poll.$key)">
     <!--Topbar-->
     <div id="topbar">
       <div class="row">
@@ -20,10 +20,10 @@
     </div>
     <!--Post content content-->
     <div class="card-body">
-      <button class="btn_choice" (click)="voteChoice1(poll.$key)" [disabled]="userVote > 0" [ngStyle]="{'background':'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(' + poll.choice1img + ')'}">
+      <button class="btn_choice" [ngClass]="{'disabled' : isDisabled(poll.$key)}" (click)="voteChoice1(poll.$key)" [ngStyle]="{'background':'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(' + poll.choice1img + ')'}">
         {{poll.choice1}}
       </button>
-      <button class="btn_choice" (click)="voteChoice2(poll.$key)"
+      <button class="btn_choice" [ngClass]="{'disabled' : isDisabled(poll.$key)}" (click)="voteChoice2(poll.$key)"
         [ngClass]="{'active' : userVote > 0 }" [ngStyle]="{'background':'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(' + poll.choice2img + ')'}">
         {{poll.choice2}}
       </button>

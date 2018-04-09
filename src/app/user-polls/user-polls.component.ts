@@ -56,11 +56,40 @@ export class UserPollsComponent implements OnInit {
   voteChoice1(pollId) {
     let vote = this.userVote == 1 ? 0 : 1
     this.voteService.updateUserChoice1Vote(pollId, this.userId, vote);
+    this.disableVote(pollId);
+    if (this.isDisabled(pollId)) {
+      console.log("TRUE")
+    } else {
+      console.log("FALSE")
+    }
   }
 
   voteChoice2(pollId) {
     let vote = this.userVote == 1 ? 0 : 1
     this.voteService.updateUserChoice2Vote(pollId, this.userId, vote);
+    this.disableVote(pollId);
+    if (this.isDisabled(pollId)) {
+      console.log("TRUE")
+    } else {
+      console.log("FALSE")
+    }
+  }
+
+  disableVote(pollId) {
+    this.voteService.disableVote(pollId, this.userId);
+  }
+
+  isDisabled(pollId) {
+    let votes = this.voteService.getUsersWhoVoted(pollId);
+    let isDisabled = false;
+    console.log(votes);
+    votes.forEach(vote => {
+      console.log(vote)
+      if (vote.hasOwnProperty(this.userId)) {
+        isDisabled = true;
+      }
+    })
+    return isDisabled;
   }
 
   randomizeGradient() {
