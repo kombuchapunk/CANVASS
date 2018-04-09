@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Poll } from './poll.model';
-import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import { AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/database';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AuthenticationService } from './authentication.service';
 import { AuthenticationComponent } from './authentication/authentication.component';
@@ -26,6 +26,7 @@ export class PollService {
     this.polls.push(newPoll);
     this.router.navigate(['feed']);
   }
+
   // getUserPolls(): FirebaseListObservable<Poll[]> {
   //   let userId = this.authService.userId;
   //   return this.userPolls;
