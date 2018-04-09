@@ -1,5 +1,14 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.scss";
 
+@media only screen and (max-width: 600px) {
+  body {
+    background-size: 500% 500% !important;
+    -webkit-animation: Gradient 25s ease infinite;
+    -moz-animation: Gradient 25s ease infinite;
+    animation: Gradient 25s ease infinite !important;
+  }
+}
+
 html, body {
   height: 100%;
   font-family: 'Roboto', sans-serif;
