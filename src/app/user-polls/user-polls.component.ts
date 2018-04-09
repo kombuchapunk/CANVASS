@@ -92,6 +92,30 @@ export class UserPollsComponent implements OnInit {
     return isDisabled;
   }
 
+  // Function to check if all polls are hidden from the user (broken)
+  //
+  // areAllHidden() {
+  //   let counter = 0;
+  //   let numberOfPolls = 0;
+  //   let allHidden = false;
+  //   this.polls.subscribe((polls) => {
+  //     numberOfPolls++
+  //     polls.forEach(poll => {
+  //       let votes= this.voteService.getUsersWhoVoted(poll.$key);
+  //       votes.forEach(vote => {
+  //         if (vote.hasOwnProperty(this.userId)) {
+  //           counter++
+  //         }
+  //       })
+  //     })
+  //   });
+  //   if (counter >= numberOfPolls) {
+  //     allHidden = true
+  //   }
+  //   console.log(allHidden)
+  //   return allHidden
+  // }
+
   randomizeGradient() {
     this.gradient = this.randomGradient();
   }

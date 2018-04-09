@@ -17,6 +17,7 @@
   margin-bottom: 50px;
   width: 100% !important;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  z-index: 0;
 }
 
 #topbar {
@@ -46,6 +47,17 @@
   line-height: 90px;
   font-family: 'Crete Round', serif;
   color: rgba(0,0,0,9);
+}
+
+#no-polls {
+  font-size: 2em;
+  text-align: center;
+  position: absolute;
+  z-index: 1;
+  width: 360px;
+  top: 400px;
+  left: 35vw;
+  margin: 0 auto !important;
 }
 
 .card-body {

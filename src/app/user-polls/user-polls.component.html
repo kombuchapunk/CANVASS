@@ -1,4 +1,7 @@
 <div *ngIf="user">
+  <div id="no-polls">
+    No new canvasses for you. Check back later.
+  </div>
   <div *ngFor="let poll of polls | async" class="card post" [hidden]="isDisabled(poll.$key)">
     <!--Topbar-->
     <div id="topbar">
