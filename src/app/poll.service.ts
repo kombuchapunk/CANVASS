@@ -9,17 +9,37 @@ import { Router } from '@angular/router';
 
 @Injectable()
 export class PollService {
-  polls: FirebaseListObservable<any[]>;
+  polls: FirebaseListObservable<Poll[]>;
+  myPolls: FirebaseListObservable<Poll[]>;
   userId: string;
   userPolls: FirebaseListObservable<any[]>;
   providers: [AuthenticationService];
 
-  constructor(private db: AngularFireDatabase, private authService: AuthenticationService, private router: Router) {
+  constructor(private db: AngularFireDatabase, private authService: AuthenticationService, private router: Router, private afAuth: AngularFireAuth) {
     this.polls = this.db.list('polls');
+    this.afAuth.authState.subscribe(user => {
+      if(user) this.userId = user.uid
+    })
   }
 
   getAllPolls(): FirebaseListObservable<Poll[]> {
     return this.polls;
+  }
+
+  // getMyPolls(): FirebaseListObservable<Poll[]> {
+  //   if (!this.userId) return;
+  //   this.myPolls = this.db.list(`polls/`);
+  //   return this.myPolls;
+  // }
+
+  getMyPolls(): FirebaseListObservable<Poll[]> {
+    this.myPolls = this.db.list('/polls', {
+      query: {
+        orderByChild: 'userId',
+        equalTo: this.userId
+      }
+    });
+    return this.myPolls;
   }
 
   addPoll(newPoll: Poll) {

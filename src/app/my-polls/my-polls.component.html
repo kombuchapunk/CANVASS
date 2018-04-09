@@ -1,1 +1,38 @@
 <app-topbar></app-topbar>
+<div id="content">
+  <div *ngIf="user">
+    <div id="no-polls">
+      You don't have any canvasses yet. Press ADD to create one
+    </div>
+    <div *ngFor="let myPoll of myPolls | async" class="card post">
+      <!--Topbar-->
+      <div id="topbar">
+        <div class="row">
+          <div class="col" id="username">
+            <span>@{{myPoll.userName}}</span>
+          </div>
+          <div class="col" id="date">
+            <span>{{myPoll.date}}</span>
+          </div>
+        </div>
+      </div>
+      <!--Question Gradient-->
+      <div class="view hm-white-slight waves-light" mdbRippleRadius (click)="randomizeGradient()">
+        <div id="gradient" [ngStyle]="getGradient()">
+          {{myPoll.question}}
+        </div>
+        <a><div class="mask"></div></a>
+      </div>
+      <!--Post content content-->
+      <div class="card-body">
+        <button class="btn_choice" [ngClass]="{'disabled' : isDisabled(myPoll.$key)}" (click)="voteChoice1(myPoll.$key)" [ngStyle]="{'background':'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(' + myPoll.choice1img + ')'}">
+          {{myPoll.choice1}}
+        </button>
+        <button class="btn_choice" [ngClass]="{'disabled' : isDisabled(myPoll.$key)}" (click)="voteChoice2(myPoll.$key)"
+          [ngClass]="{'active' : userVote > 0 }" [ngStyle]="{'background':'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(' + myPoll.choice2img + ')'}">
+          {{myPoll.choice2}}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
