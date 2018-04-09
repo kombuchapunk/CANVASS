@@ -1,0 +1,17 @@
+.btn-gradient:hover {
+  background-position: right center; /* change the direction of the change here */
+}
+
+.btn-gradient {
+  background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  font-weight: bold;
+  border-radius: 15px;
+}
+
+.btn-outline-secondary {
+  border: 2px solid rgba(0,0,0,0.4) !important;
+  color: rgba(0,0,0,0.6) !important;
+}
