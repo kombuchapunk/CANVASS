@@ -6,21 +6,28 @@ export class VoteService {
 
   constructor(private db: AngularFireDatabase) { }
 
-  getChoice1Votes(itemId): FirebaseObjectObservable<any> {
+  getChoice1Votes(pollId): FirebaseObjectObservable<any> {
     // Gets total votes
-    return this.db.object(`choice1votes/${itemId}`)
+    return this.db.object(`choice1votes/${pollId}`)
   }
 
-  getChoice2Votes(itemId): FirebaseObjectObservable<any> {
+  getChoice2Votes(pollId): FirebaseObjectObservable<any> {
     // Gets total votes
-    return this.db.object(`choice2votes/${itemId}`)
+    return this.db.object(`choice2votes/${pollId}`)
   }
 
-  updateUserChoice1Vote(itemId, userId, vote): void {
+  updateUserChoice1Vote(pollId, voterId, vote): void {
     // Creates or updates user's vote
     let data = {}
-    data[userId] = vote
-    this.db.object(`choice1vote/${itemId}`).update(data)
+    data[voterId] = vote
+    this.db.object(`choice1vote/${pollId}`).update(data)
+  }
+
+  updateUserChoice2Vote(pollId, voterId, vote): void {
+    // Creates or updates user's vote
+    let data = {}
+    data[voterId] = vote
+    this.db.object(`choice2vote/${pollId}`).update(data)
   }
 
 }
