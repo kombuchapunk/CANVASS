@@ -4,7 +4,8 @@ import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/data
 @Injectable()
 export class VoteService {
 
-  constructor(private db: AngularFireDatabase) { }
+  constructor(private db: AngularFireDatabase) {
+  }
 
   getChoice1Votes(pollId): FirebaseObjectObservable<any> {
     // Gets total votes
@@ -14,6 +15,10 @@ export class VoteService {
   getChoice2Votes(pollId): FirebaseObjectObservable<any> {
     // Gets total votes
     return this.db.object(`choice2votes/${pollId}`)
+  }
+
+  getUsersWhoVoted(pollId): FirebaseObjectObservable<any> {
+    return this.db.object(`voted/${pollId}`)
   }
 
   updateUserChoice1Vote(pollId, voterId, vote): void {
@@ -28,6 +33,12 @@ export class VoteService {
     let data = {}
     data[voterId] = vote
     this.db.object(`choice2vote/${pollId}`).update(data)
+  }
+
+  disableVote(pollId, voterId): void {
+    let data = {}
+    data[voterId] = true
+    this.db.object(`voted/${pollId}`).update(data);
   }
 
 }
