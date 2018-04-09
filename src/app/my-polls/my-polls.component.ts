@@ -34,13 +34,21 @@ export class MyPollsComponent implements OnInit {
   ngOnInit() {
     this.polls = this.pollService.getAllPolls();
     // this.userPolls = this.pollService.getUserPolls();
-    this.gradient = this.randomGradient();
+    this.gradient = this.randomGradient()
     this.myPolls = this.pollService.getMyPolls();
   }
 
   ngDoCheck() {
     this.user = firebase.auth().currentUser;
     this.userId = this.user.uid;
+  }
+
+  getChoice1Count(pollId) {
+    console.log(this.voteService.getChoice1Votes(pollId));
+  }
+
+  getChoice2Count(pollId) {
+    console.log(this.voteService.getChoice2Votes(pollId));
   }
 
   getGradient() {
@@ -58,22 +66,22 @@ export class MyPollsComponent implements OnInit {
     let vote = this.userVote == 1 ? 0 : 1
     this.voteService.updateUserChoice1Vote(pollId, this.userId, vote);
     this.disableVote(pollId);
-    if (this.isDisabled(pollId)) {
-      console.log("TRUE")
-    } else {
-      console.log("FALSE")
-    }
+    // if (this.isDisabled(pollId)) {
+    //   console.log("TRUE")
+    // } else {
+    //   console.log("FALSE")
+    // }
   }
 
   voteChoice2(pollId) {
     let vote = this.userVote == 1 ? 0 : 1
     this.voteService.updateUserChoice2Vote(pollId, this.userId, vote);
     this.disableVote(pollId);
-    if (this.isDisabled(pollId)) {
-      console.log("TRUE")
-    } else {
-      console.log("FALSE")
-    }
+    // if (this.isDisabled(pollId)) {
+    //   console.log("TRUE")
+    // } else {
+    //   console.log("FALSE")
+    // }
   }
 
   disableVote(pollId) {

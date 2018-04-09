@@ -25,12 +25,12 @@
       </div>
       <!--Post content content-->
       <div class="card-body">
-        <button class="btn_choice" (click)="getChoice1Votes(myPoll.$key)" [ngStyle]="{'background':'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(' + myPoll.choice1img + ')'}">
-          {{myPoll.choice1}}
+        <button class="btn_choice" [ngStyle]="{'background':'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(' + myPoll.choice1img + ')'}">
+          {{myPoll.choice1Counter}}
         </button>
-        <button class="btn_choice" (click)="getChoice2Votes(myPoll.$key)"
+        <button class="btn_choice"
           [ngClass]="{'active' : userVote > 0 }" [ngStyle]="{'background':'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(' + myPoll.choice2img + ')'}">
-          {{myPoll.choice2}}
+          {{myPoll.choice2Counter}}
         </button>
       </div>
     </div>
