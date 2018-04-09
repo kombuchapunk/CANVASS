@@ -25,12 +25,12 @@
       </div>
       <!--Post content content-->
       <div class="card-body">
-        <button class="btn_choice" [ngStyle]="{'background':'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(' + myPoll.choice1img + ')'}">
-          {{myPoll.choice1Counter}}
+        <button class="btn_choice" [ngClass]="{'most-votes': myPoll.choice1Counter > myPoll.choice2Counter}"
+         [ngStyle]="{'background':'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(' + myPoll.choice1img + ')'}">
+          <span style="font-size:0.8em;">{{myPoll.choice1}} </span> | {{myPoll.choice1Counter}}
         </button>
-        <button class="btn_choice"
-          [ngClass]="{'active' : userVote > 0 }" [ngStyle]="{'background':'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(' + myPoll.choice2img + ')'}">
-          {{myPoll.choice2Counter}}
+        <button class="btn_choice" [ngClass]="{'most-votes': myPoll.choice2Counter > myPoll.choice1Counter}" [ngStyle]="{'background':'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(' + myPoll.choice2img + ')'}">
+          <span style="font-size:0.75em;">{{myPoll.choice2}} </span> | {{myPoll.choice2Counter}}
         </button>
       </div>
     </div>

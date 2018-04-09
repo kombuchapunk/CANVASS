@@ -43,14 +43,6 @@ export class MyPollsComponent implements OnInit {
     this.userId = this.user.uid;
   }
 
-  getChoice1Count(pollId) {
-    console.log(this.voteService.getChoice1Votes(pollId));
-  }
-
-  getChoice2Count(pollId) {
-    console.log(this.voteService.getChoice2Votes(pollId));
-  }
-
   getGradient() {
     return this.gradient;
   }

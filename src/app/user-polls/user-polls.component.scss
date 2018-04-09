@@ -69,6 +69,7 @@
 }
 
 .btn_choice {
+  background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
   border: 0;
   display: block;
   cursor: pointer;
@@ -85,4 +86,5 @@
 .btn_choice:hover {
   //background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.3)) !important;
   background-blend-mode:lighten !important;
+  text-decoration: underline;
 }

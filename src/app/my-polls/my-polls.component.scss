@@ -85,7 +85,6 @@
 .btn_choice {
   border: 0;
   display: block;
-  cursor: pointer;
   width: 100%;
   height: auto;
   margin: 0 auto;
@@ -96,7 +95,7 @@
   position:relative;
 }
 
-.btn_choice:hover {
-  //background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.3)) !important;
+.most-votes {
+  background-color: rgba(56, 198, 0, 0.7) !important;
   background-blend-mode:lighten !important;
 }
