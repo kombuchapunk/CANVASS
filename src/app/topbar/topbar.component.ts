@@ -17,6 +17,7 @@ import { AuthenticationService } from '../authentication.service';
 export class TopbarComponent {
   private user;
   private userId;
+  private userEmail;
   // public isAddNew;
   // public isFeed;
   // public isProfile;
@@ -26,6 +27,7 @@ export class TopbarComponent {
   ngDoCheck() {
     this.user = firebase.auth().currentUser;
     this.userId = this.user.uid;
+    this.userEmail = this.user.email;
   }
 
   logout() {
