@@ -17,6 +17,7 @@ import { AddPollComponent } from './add-poll/add-poll.component';
 import { AuthenticationService } from './authentication.service';
 import { TopbarComponent } from './topbar/topbar.component';
 import { ProfileComponent } from './profile/profile.component';
+import { MyPollsComponent } from './my-polls/my-polls.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -35,7 +36,8 @@ export const firebaseConfig = {
     FeedComponent,
     AddPollComponent,
     TopbarComponent,
-    ProfileComponent
+    ProfileComponent,
+    MyPollsComponent
   ],
   imports: [
     BrowserModule,
