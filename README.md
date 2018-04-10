@@ -51,16 +51,16 @@ _modesau@gmail.com_
 
 Javascript, HTML, CSS, Firebase
 
-## Screenshots (Mobile View)
-
-![view 2](https://i.imgur.com/uwj7f1B.png)
-![view 3](https://i.imgur.com/jwdpr6U.png)
-
 ## Screenshots (Desktop View)
 
 ![view 2](https://i.imgur.com/YRUoSmf.jpg)
 ![view 3](https://i.imgur.com/OvfBw5u.jpg)
 ![view 3](https://i.imgur.com/AW1Qclw.jpg)
+
+## Screenshots (Mobile View)
+
+![view 2](https://i.imgur.com/uwj7f1B.png)
+![view 3](https://i.imgur.com/jwdpr6U.png)
 
 ### License
 
