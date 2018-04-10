@@ -1,27 +1,50 @@
-# PollApp
+# {CANVASS}
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
+## Social app to create polls and exchange opinions/collect data from other users pn the network
 
-## Development server
+#### By _**Misha Petrov**_
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+![view 1](https://i.imgur.com/idoVfxs.png)
 
-## Code scaffolding
+## Setup/Installation Requirements
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#### You can view the app live by visiting: 
 
-## Build
+## https://poll-1b51a.firebaseapp.com 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+#### Or to deploy on local machine: 
 
-## Running unit tests
+* Clone the repository to your local computer.
+* In terminal, navigate to the project's directory
+* In terminal, execute _`$ npm install`_
+* In terminal, type _`$ ng serve`_ to build an app on a local computer
+* In browser, navigate to localhost:4200/
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Specifications (use case scenarios)
 
-## Running end-to-end tests
+* User can view, add, update and delete divisions.
+* User can add employees
+* User can view employees in each division
+* User can assign employee to a division
+* User can edit and delete employees for the division
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Support and contact details
 
-## Further help
+_modesau@gmail.com_
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Technologies Used
+
+Ruby, Sinatra, Postgres, Active Record, HTML, CSS
+
+## Screenshots
+
+![view 2](https://i.imgur.com/gB56421.png)
+![view 3](https://i.imgur.com/6v0DRgu.png)
+![view 4](https://i.imgur.com/DnF3yNM.png)
+
+
+### License
+
+*Licensed under MIT license*
+
+Copyright (c) 2018 **_Misha Petrov_**
