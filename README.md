@@ -22,11 +22,26 @@
 
 ## Specifications (use case scenarios)
 
-* User can view, add, update and delete divisions.
-* User can add employees
-* User can view employees in each division
-* User can assign employee to a division
-* User can edit and delete employees for the division
+* User can sign up with an email.
+* User can login with an exisiting account
+* User can login with Google Authentication
+* User can view a feed of all unanswered polls
+* User can answer the polls ONLY ONCE
+* User sees ONLY unanswered by her polls in her feed
+* User can create her own poll
+* User can see results on her poll
+* User can switch a dynamically generated background gradient on poll header
+* User can logout
+
+## Little visual features
+
+* Background gradient is animated with nice UI colors
+* Poll header has a dynamically generated gradient
+
+## PLANS TO ADD
+
+* User can delete/edit polls
+* User can follow other users and only see their polls in her feed
 
 ## Support and contact details
 
@@ -34,14 +49,18 @@ _modesau@gmail.com_
 
 ## Technologies Used
 
-Ruby, Sinatra, Postgres, Active Record, HTML, CSS
+Javascript, HTML, CSS, Firebase
 
-## Screenshots
+## Screenshots (Mobile View)
 
-![view 2](https://i.imgur.com/gB56421.png)
-![view 3](https://i.imgur.com/6v0DRgu.png)
-![view 4](https://i.imgur.com/DnF3yNM.png)
+![view 2](https://i.imgur.com/uwj7f1B.png)
+![view 3](https://i.imgur.com/jwdpr6U.png)
 
+## Screenshots (Desktop View)
+
+![view 2](https://i.imgur.com/YRUoSmf.jpg)
+![view 3](https://i.imgur.com/OvfBw5u.jpg)
+![view 3](https://i.imgur.com/AW1Qclw.jpg)
 
 ### License
 
