@@ -29,6 +29,7 @@
 * User can answer the polls ONLY ONCE
 * User sees ONLY unanswered by her polls in her feed
 * User can create her own poll
+* User can add links to images for each option on the poll (sets them as background images on the buttons)
 * User can see results on her poll
 * User can switch a dynamically generated background gradient on poll header
 * User can logout
